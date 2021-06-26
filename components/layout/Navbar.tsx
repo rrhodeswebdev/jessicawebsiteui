@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { HiOutlineMenu as MenuIcon } from 'react-icons/hi';
 import { Transition } from '@headlessui/react';
+import logo from '../../public/jesserhodes-logo.svg';
 
 function ActiveLink({
   children,
@@ -44,13 +45,8 @@ export default function Navbar() {
       <nav className='container relative mx-auto'>
         <div className='flex justify-between items-center'>
           <Link href='/'>
-            <a>
-              <Image
-                src='/jesserhodes-logo.svg'
-                alt='Jesse Rhodes Logo'
-                width='auto'
-                height={86}
-              />
+            <a className='w-48'>
+              <Image src={logo} alt='Jesse Rhodes Logo' />
             </a>
           </Link>
           <div className='md:flex items-center hidden'>
@@ -66,20 +62,11 @@ export default function Navbar() {
             <MenuIcon className='text-3xl' />
           </button>
         </div>
-        <Transition
-          appear={true}
-          show={mobileToggle}
-          enter='transition-opacity duration-75'
-          enterFrom='opacity-0'
-          enterTo='opacity-100'
-          leave='transition-opacity duration-200'
-          leaveFrom='opacity-100'
-          leaveTo='opacity-0'
-        >
+        <Transition show={mobileToggle}>
           <div
             className={`${
               mobileToggle ? 'block' : 'hidden'
-            } absolute items-center md:hidden w-full z-20 bg-gray-200 text-center mt-6`}
+            } absolute items-center md:hidden w-full z-20 bg-gray-200 text-center mt-6 p-6`}
             onClick={onMobileMenuClick}
           >
             <ActiveLink href='/about'>About</ActiveLink>
