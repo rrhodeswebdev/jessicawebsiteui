@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { HiOutlineMenu as MenuIcon } from 'react-icons/hi';
 import { Transition } from '@headlessui/react';
-import logo from '../../public/jesserhodes-logo.svg';
 
 function ActiveLink({
   children,
@@ -46,12 +44,6 @@ export default function Navbar() {
         <div className='flex justify-between items-center'>
           <Link href='/'>
             <a className='w-48'>
-              {/* <Image
-                src='/jesserhodes-logo.svg'
-                alt='Jesse Rhodes Logo'
-                width={200}
-                height={84}
-              /> */}
               <img src='jesserhodes-logo.svg' />
             </a>
           </Link>
