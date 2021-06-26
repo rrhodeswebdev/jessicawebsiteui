@@ -46,7 +46,12 @@ export default function Navbar() {
         <div className='flex justify-between items-center'>
           <Link href='/'>
             <a className='w-48'>
-              <Image src={logo} alt='Jesse Rhodes Logo' />
+              <Image
+                src='/jesserhodes-logo.svg'
+                alt='Jesse Rhodes Logo'
+                width={200}
+                height={84}
+              />
             </a>
           </Link>
           <div className='md:flex items-center hidden'>
