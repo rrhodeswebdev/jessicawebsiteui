@@ -39,8 +39,8 @@ export default function Navbar() {
   };
 
   return (
-    <header className='p-6'>
-      <nav className='container relative mx-auto'>
+    <header className='relative px-12 py-6'>
+      <nav className='mx-auto'>
         <div className='flex justify-between items-center'>
           <Link href='/'>
             <a className='w-48'>
@@ -64,7 +64,7 @@ export default function Navbar() {
           <div
             className={`${
               mobileToggle ? 'block' : 'hidden'
-            } absolute items-center md:hidden w-full z-20 bg-gray-200 text-center mt-6 p-6`}
+            } absolute items-center md:hidden w-screen left-0 z-20 bg-gray-200 text-center mt-6 p-6`}
             onClick={onMobileMenuClick}
           >
             <ActiveLink href='/about'>About</ActiveLink>
