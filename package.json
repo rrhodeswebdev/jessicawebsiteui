@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@types/react": "17.0.14",
-    "@types/react-slick": "0.23.4",
+    "@types/react-slick": "0.23.5",
     "autoprefixer": "10.2.6",
     "postcss": "8.3.5",
     "tailwindcss": "2.2.4",
