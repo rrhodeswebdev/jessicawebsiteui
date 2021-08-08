@@ -28,8 +28,6 @@ const ContactForm = () => {
 	};
 
 	const onSubmit = (data: object) => {
-		console.log(data);
-
 		submitFormData(data, formId, context);
 		reset();
 		setSuccessMessage(
