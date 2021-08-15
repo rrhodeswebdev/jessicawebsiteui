@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@babel/core": "^7.15.0",
     "@headlessui/react": "1.4.0",
     "axios": "0.21.1",
     "dayjs": "^1.10.6",
