@@ -1,12 +1,17 @@
 import React from 'react';
-import { Service } from './ServiceInterface';
 
-interface ServiceInfoBlockProps {
-	service: Service;
+interface Props {
+	service: {
+		_id: string;
+		category: string;
+		cost: number;
+		description: string;
+		time: number;
+		title: string;
+	};
 }
 
-function ServiceInfoBlock(props: ServiceInfoBlockProps) {
-	const { service } = props;
+const ServiceInfoBlock: React.FC<Props> = ({ service }) => {
 	return (
 		<div className='mb-8 pb-8 text-center font-light border-b border-secondary'>
 			<h2 className='text-4xl pb-4'>{service.title}</h2>
@@ -15,6 +20,6 @@ function ServiceInfoBlock(props: ServiceInfoBlockProps) {
 			<p className='text-sm pb-2'>Est. time: {service.time} minutes</p>
 		</div>
 	);
-}
+};
 
 export default ServiceInfoBlock;
