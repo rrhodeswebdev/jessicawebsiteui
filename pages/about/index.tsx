@@ -2,7 +2,7 @@ import React from 'react';
 import Heading from '../../components/content/Heading';
 import Button from '../../components/elements/Button';
 
-export default function AboutPage() {
+const AboutPage: React.FC = () => {
 	return (
 		<div className='container mx-auto p-6 max-w-6xl'>
 			<Heading title='About Me' />
@@ -75,4 +75,6 @@ export default function AboutPage() {
 			</div>
 		</div>
 	);
-}
+};
+
+export default AboutPage;

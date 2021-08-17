@@ -6,15 +6,20 @@ import ServiceCard from '../../components/content/ServiceCard';
 import Testimonials from '../../components/content/Testimonials';
 import Button from '../../components/elements/Button';
 
-interface ServicesProps {
-	data: { testimonials: [] };
+interface Props {
+	data: {
+		testimonials: {
+			testimonial: string;
+			_id: string;
+		}[];
+	};
 }
 
 const testimonialQuery = groq`
   *[_type == 'testimonials' && forPage == 'Services']
 `;
 
-export default function ServicesPage(props: ServicesProps) {
+const ServicesPage: React.FC<Props> = props => {
 	const { data: testimonials } = props;
 
 	const services = [
@@ -55,7 +60,7 @@ export default function ServicesPage(props: ServicesProps) {
 			</div>
 		</section>
 	);
-}
+};
 
 export async function getStaticProps() {
 	const testimonials = await sanityClient.fetch(testimonialQuery);
@@ -66,3 +71,5 @@ export async function getStaticProps() {
 		},
 	};
 }
+
+export default ServicesPage;

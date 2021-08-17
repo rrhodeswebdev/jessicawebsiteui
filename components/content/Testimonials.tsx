@@ -3,16 +3,14 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 
 interface Props {
-	testimonials: [
-		{
-			testimonial: string;
-			_id: string;
-		}
-	];
+	testimonials: {
+		testimonial: string;
+		_id: string;
+	}[];
 }
 
 const Testimonials: React.FC<Props> = ({ testimonials }) => {
-	const settings: object = {
+	const settings = {
 		dots: false,
 		infinite: true,
 		adaptiveHeight: true,

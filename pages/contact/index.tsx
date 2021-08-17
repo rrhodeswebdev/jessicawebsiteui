@@ -3,7 +3,7 @@ import Heading from '../../components/content/Heading';
 import SubHeading from '../../components/content/SubHeading';
 import ContactForm from '../../components/forms/ContactForm';
 
-export default function ContactPage() {
+const ContactPage: React.FC = () => {
 	return (
 		<div className='container mx-auto p-6 max-w-6xl'>
 			<Heading title="Let's Connect" />
@@ -55,4 +55,6 @@ export default function ContactPage() {
 			</div>
 		</div>
 	);
-}
+};
+
+export default ContactPage;
