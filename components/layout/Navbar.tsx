@@ -4,13 +4,12 @@ import { useRouter } from 'next/router';
 import { HiOutlineMenu as MenuIcon } from 'react-icons/hi';
 import { Transition } from '@headlessui/react';
 
-function ActiveLink({
-	children,
-	href,
-}: {
+interface Props {
 	children: React.ReactNode;
 	href: string;
-}) {
+}
+
+const ActiveLink: React.FC<Props> = ({ children, href }) => {
 	const router = useRouter();
 
 	const handleClick = (e: any) => {
@@ -29,9 +28,9 @@ function ActiveLink({
 			{children}
 		</a>
 	);
-}
+};
 
-export default function Navbar() {
+const Navbar = () => {
 	const [mobileToggle, setMobileToggle] = useState(false);
 
 	const onMobileMenuClick = () => {
@@ -76,4 +75,6 @@ export default function Navbar() {
 			</nav>
 		</header>
 	);
-}
+};
+
+export default Navbar;

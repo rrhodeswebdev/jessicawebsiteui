@@ -1,15 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function Button({
-	children,
-	href,
-	outlineVariant,
-}: {
+interface Props {
 	children: React.ReactNode;
 	href: string;
 	outlineVariant?: boolean;
-}) {
+}
+
+const Button: React.FC<Props> = ({ children, href, outlineVariant }) => {
 	return (
 		<Link href={href}>
 			<a
@@ -23,4 +21,6 @@ export default function Button({
 			</a>
 		</Link>
 	);
-}
+};
+
+export default Button;

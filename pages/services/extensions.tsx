@@ -3,18 +3,25 @@ import { groq } from 'next-sanity';
 import { sanityClient } from '../../lib/config';
 import Heading from '../../components/content/Heading';
 import ServiceInfoBlock from '../../components/content/ServiceInfoBlock';
-import { Service } from '../../components/content/ServiceInterface';
 import Button from '../../components/elements/Button';
 
-interface ExtensionsServiceProps {
-	data: { extensionsServices: [] };
+interface Props {
+	data: {
+		extensionsServices: {
+			_id: string;
+			category: string;
+			cost: number;
+			description: string;
+			time: number;
+			title: string;
+		}[];
+	};
 }
-
 const extensionsServiceQuery = groq`
   *[_type == 'services' && category == 'Extensions'] | order(_createdAt asc)
 `;
 
-export const ExtensionsPage = (props: ExtensionsServiceProps) => {
+const ExtensionsPage: React.FC<Props> = props => {
 	const { data } = props;
 
 	return (
@@ -24,7 +31,7 @@ export const ExtensionsPage = (props: ExtensionsServiceProps) => {
 				<img src='/extension-header.jpeg' alt='Styling Services' />
 			</div>
 			<div>
-				{data.extensionsServices.map((service: Service) => (
+				{data.extensionsServices.map(service => (
 					<ServiceInfoBlock service={service} key={service._id} />
 				))}
 			</div>

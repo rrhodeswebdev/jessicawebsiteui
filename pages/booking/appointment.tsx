@@ -2,7 +2,7 @@ import React from 'react';
 import Heading from '../../components/content/Heading';
 import AppointmentForm from '../../components/forms/AppointmentForm';
 
-const AppointmentPage = () => {
+const AppointmentPage: React.FC = () => {
 	return (
 		<section className='container mx-auto max-w-6xl'>
 			<Heading title='Request Appointment' />

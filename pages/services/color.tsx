@@ -3,18 +3,26 @@ import { groq } from 'next-sanity';
 import { sanityClient } from '../../lib/config';
 import Heading from '../../components/content/Heading';
 import ServiceInfoBlock from '../../components/content/ServiceInfoBlock';
-import { Service } from '../../components/content/ServiceInterface';
 import Button from '../../components/elements/Button';
 
-interface ColorServiceProps {
-	data: { colorServices: [] };
+interface Props {
+	data: {
+		colorServices: {
+			_id: string;
+			category: string;
+			cost: number;
+			description: string;
+			time: number;
+			title: string;
+		}[];
+	};
 }
 
 const colorServiceQuery = groq`
   *[_type == 'services' && category == 'Color'] | order(_createdAt asc)
 `;
 
-export const ColorPage = (props: ColorServiceProps) => {
+const ColorPage: React.FC<Props> = props => {
 	const { data } = props;
 
 	return (
@@ -24,7 +32,7 @@ export const ColorPage = (props: ColorServiceProps) => {
 				<img src='/color-header.jpeg' alt='Styling Services' />
 			</div>
 			<div>
-				{data.colorServices.map((service: Service) => (
+				{data.colorServices.map(service => (
 					<ServiceInfoBlock service={service} key={service._id} />
 				))}
 			</div>

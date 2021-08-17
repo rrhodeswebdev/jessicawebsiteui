@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { submitFormData } from '../../lib/forms';
 
-type FormData = {
+interface FormData {
 	email: string;
 	phone: string;
 	firstname: string;
@@ -10,9 +10,9 @@ type FormData = {
 	appointment_preferred_time: string;
 	appointment_request_service: string;
 	message: string;
-};
+}
 
-const AppointmentForm = () => {
+const AppointmentForm: React.FC = () => {
 	const [successMessage, setSuccessMessage] = useState('');
 	const {
 		register,
@@ -26,7 +26,7 @@ const AppointmentForm = () => {
 		pageName: 'Appointment Request',
 	};
 
-	const onSubmit = (data: object) => {
+	const onSubmit = (data: FormData) => {
 		const formData = { ...data, appointment_request_status: 'pending' };
 
 		submitFormData(formData, formId, context);

@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { submitFormData } from '../../lib/forms';
 
-type FormData = {
+interface FormData {
 	email: string;
 	firstname: string;
 	lastname: string;
 	reason_of_contact: string;
 	message: string;
-};
+}
 
 const ContactForm = () => {
 	const [successMessage, setSuccessMessage] = useState('');
@@ -27,7 +27,7 @@ const ContactForm = () => {
 		pageName: 'Contact',
 	};
 
-	const onSubmit = (data: object) => {
+	const onSubmit = (data: FormData) => {
 		submitFormData(data, formId, context);
 		reset();
 		setSuccessMessage(
