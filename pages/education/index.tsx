@@ -28,7 +28,7 @@ interface Props {
 
 const EducationPage: React.FC<Props> = ({ data }) => {
 	return (
-		<section className='container mx-auto max-w-6xl'>
+		<section className='container mx-auto max-w-6xl px-8'>
 			<Heading title='Education' />
 			<div className='mb-8'>
 				<h2 className='text-3xl mb-6 text-center font-light'>
@@ -61,21 +61,21 @@ const EducationPage: React.FC<Props> = ({ data }) => {
 					scheduled for a certification class!
 				</p>
 			</div>
-			<div className='flex flex-wrap justify-between mb-16'>
+			<div className='flex flex-wrap justify-center xl:justify-between mb-16'>
 				<img
 					src='laced-header-1.jpeg'
 					alt='Woman standing in forest'
-					className='max-w-xs'
+					className='max-w-xs md:pr-2 lg:pr-2 mb-6'
 				/>
 				<img
 					src='laced-header-2.jpeg'
 					alt='Woman looking up in forest'
-					className='max-w-xs'
+					className='max-w-xs md:pl-2 lg:px-2 mb-6'
 				/>
 				<img
 					src='laced-header-3.jpeg'
 					alt='Woman standing in forest'
-					className='max-w-xs'
+					className='max-w-xs lg:pl-2 mb-6'
 				/>
 			</div>
 			<div className='w-full'>

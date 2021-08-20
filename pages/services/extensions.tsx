@@ -25,7 +25,7 @@ const ExtensionsPage: React.FC<Props> = props => {
 	const { data } = props;
 
 	return (
-		<section className='container mx-auto max-w-6xl'>
+		<section className='container mx-auto max-w-6xl px-8'>
 			<Heading title='Extensions' />
 			<div className='mb-12'>
 				<img src='/extension-header.jpeg' alt='Styling Services' />

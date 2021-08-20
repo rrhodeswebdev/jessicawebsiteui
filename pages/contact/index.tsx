@@ -10,8 +10,8 @@ const ContactPage: React.FC = () => {
 			<div className='mb-12'>
 				<img src='/contact-header.jpeg' alt='Contact us header' />
 			</div>
-			<div className='flex flex-wrap flex-row w-full'>
-				<div className='flex flex-col flex-1 pr-8'>
+			<div className='flex flex-wrap flex-col md:flex-row w-full'>
+				<div className='flex flex-col flex-1 md:pr-8 mb-8'>
 					<div className='mb-6'>
 						<SubHeading title='Email' />
 						<p className='font-light text-accent hover:underline'>
