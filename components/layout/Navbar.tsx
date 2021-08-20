@@ -46,14 +46,14 @@ const Navbar = () => {
 							<img src='/jesserhodes-logo.svg' />
 						</a>
 					</Link>
-					<div className='md:flex items-center hidden'>
+					<div className='lg:flex items-center hidden'>
 						<ActiveLink href='/about'>About</ActiveLink>
 						<ActiveLink href='/services'>Services</ActiveLink>
 						<ActiveLink href='/education'>Education</ActiveLink>
 						<ActiveLink href='/contact'>Contact</ActiveLink>
 					</div>
 					<button
-						className='md:hidden focus:outline-none'
+						className='lg:hidden focus:outline-none'
 						onClick={onMobileMenuClick}
 					>
 						<MenuIcon className='text-3xl' />
@@ -63,7 +63,7 @@ const Navbar = () => {
 					<div
 						className={`${
 							mobileToggle ? 'block' : 'hidden'
-						} absolute items-center md:hidden w-screen left-0 z-20 bg-gray-200 text-center mt-6 p-6`}
+						} absolute items-center lg:hidden w-screen left-0 z-20 bg-gray-200 text-center mt-6 p-6`}
 						onClick={onMobileMenuClick}
 					>
 						<ActiveLink href='/about'>About</ActiveLink>
