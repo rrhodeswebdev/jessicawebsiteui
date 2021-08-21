@@ -43,8 +43,8 @@ const AppointmentForm: React.FC = () => {
 					<p>{successMessage}</p>
 				</div>
 			)}
-			<div className='flex justify-between'>
-				<div className='flex flex-col mb-4 pr-4 w-full'>
+			<div className='flex flex-col md:flex-row justify-between'>
+				<div className='flex flex-col mb-4 md:pr-4 w-full'>
 					<label htmlFor='email' className='font-light mb-1'>
 						Email
 					</label>
@@ -59,7 +59,7 @@ const AppointmentForm: React.FC = () => {
 						</p>
 					)}
 				</div>
-				<div className='flex flex-col mb-4 pl-4 w-full'>
+				<div className='flex flex-col mb-4 md:pl-4 w-full'>
 					<label htmlFor='phone' className='font-light mb-1'>
 						Phone Number
 					</label>
@@ -75,8 +75,8 @@ const AppointmentForm: React.FC = () => {
 					)}
 				</div>
 			</div>
-			<div className='flex justify-between'>
-				<div className='flex flex-col mb-4 pr-4 w-full'>
+			<div className='flex flex-col md:flex-row justify-between'>
+				<div className='flex flex-col mb-4 md:pr-4 w-full'>
 					<label htmlFor='firstname' className='font-light mb-1'>
 						First Name
 					</label>
@@ -91,7 +91,7 @@ const AppointmentForm: React.FC = () => {
 						</p>
 					)}
 				</div>
-				<div className='flex flex-col mb-4 pl-4 w-full'>
+				<div className='flex flex-col mb-4 md:pl-4 w-full'>
 					<label htmlFor='lastname' className='font-light mb-1'>
 						Last Name
 					</label>
@@ -107,8 +107,8 @@ const AppointmentForm: React.FC = () => {
 					)}
 				</div>
 			</div>
-			<div className='flex justify-between'>
-				<div className='flex flex-col mb-4 pr-4 w-full'>
+			<div className='flex flex-col md:flex-row justify-between'>
+				<div className='flex flex-col mb-4 md:pr-4 w-full'>
 					<label
 						htmlFor='reason_of_contact'
 						className='font-light mb-1'
@@ -132,7 +132,7 @@ const AppointmentForm: React.FC = () => {
 						</p>
 					)}
 				</div>
-				<div className='flex flex-col mb-4 pl-4 w-full'>
+				<div className='flex flex-col mb-4 md:pl-4 w-full'>
 					<label
 						htmlFor='reason_of_contact'
 						className='font-light mb-1'
@@ -185,7 +185,7 @@ const AppointmentForm: React.FC = () => {
 				</p>
 			</div>
 			<div className='flex justify-center'>
-				<button className='text-white bg-primary hover:bg-accent w-1/4 p-2 mb-6 transition-colors text-center uppercase font-light'>
+				<button className='text-white bg-primary hover:bg-accent w-full md:w-1/4 p-2 mb-6 transition-colors text-center uppercase font-light'>
 					Submit
 				</button>
 			</div>
