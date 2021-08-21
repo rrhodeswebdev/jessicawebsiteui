@@ -4,7 +4,7 @@ import AppointmentForm from '../../components/forms/AppointmentForm';
 
 const AppointmentPage: React.FC = () => {
 	return (
-		<section className='container mx-auto max-w-6xl'>
+		<section className='container mx-auto max-w-6xl px-8'>
 			<Heading title='Request Appointment' />
 			<div className='mb-8'>
 				<p className='text-center font-light'>
