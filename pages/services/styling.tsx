@@ -10,7 +10,13 @@ interface Props {
 		stylingServices: {
 			_id: string;
 			category: string;
-			cost: number;
+			costType: string;
+			fixedCost?: number;
+			dynamicCost?: number;
+			rangedCost: {
+				min: number;
+				max: number;
+			};
 			description: string;
 			time: number;
 			title: string;
