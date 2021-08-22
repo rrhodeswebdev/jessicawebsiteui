@@ -82,12 +82,19 @@ const EducationPage: React.FC<Props> = ({ data }) => {
 				<h2 className='text-3xl mb-6 text-center font-light'>
 					Upcoming Classes
 				</h2>
-				{data.filteredEducation.map(education => (
-					<LacedClassBox
-						key={education._id}
-						classDetails={education}
-					/>
-				))}
+				{data.filteredEducation.length > 0 ? (
+					data.filteredEducation.map(education => (
+						<LacedClassBox
+							key={education._id}
+							classDetails={education}
+						/>
+					))
+				) : (
+					<p className='text-center font-light mb-6'>
+						No classes are currently scheduled. Please check back at
+						a later date.
+					</p>
+				)}
 			</div>
 		</section>
 	);
