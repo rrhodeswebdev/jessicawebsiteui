@@ -10,7 +10,13 @@ interface Props {
 		extensionsServices: {
 			_id: string;
 			category: string;
-			cost: number;
+			costType: string;
+			fixedCost?: number;
+			dynamicCost?: number;
+			rangedCost: {
+				min: number;
+				max: number;
+			};
 			description: string;
 			time: number;
 			title: string;
@@ -34,6 +40,22 @@ const ExtensionsPage: React.FC<Props> = props => {
 				{data.extensionsServices.map(service => (
 					<ServiceInfoBlock service={service} key={service._id} />
 				))}
+			</div>
+			<div className='text-center'>
+				<h3 className='text-4xl pb-4 font-light'>Extensions Offered</h3>
+				<ul className='font-light mb-6 text-lg'>
+					<li>Beaded Weft</li>
+					<li>Tape Ins</li>
+					<li>Clip Ins</li>
+					<li>Halo</li>
+					<li>Keratin</li>
+				</ul>
+				<p className='font-light'>
+					I offer a variety of extension methods to create a custom
+					experience for each guest. I require an in-person
+					consultation for any new extension client. Pricing and
+					method determined during the consultation.
+				</p>
 			</div>
 			<div className='m-6 p-6'>
 				<p className='text-center font-light text-sm italic'>
