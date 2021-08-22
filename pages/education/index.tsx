@@ -93,7 +93,7 @@ const EducationPage: React.FC<Props> = ({ data }) => {
 	);
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	const education = await sanityClient.fetch(educationQuery);
 	const todayDate = dayjs();
 	const filteredEducation = education.filter(
