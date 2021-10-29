@@ -10,7 +10,7 @@
 	"dependencies": {
 		"@babel/core": "7.15.8",
 		"@headlessui/react": "1.4.1",
-		"axios": "0.23.0",
+		"axios": "0.24.0",
 		"dayjs": "1.10.7",
 		"next": "11.1.2",
 		"next-sanity": "0.4.0",
