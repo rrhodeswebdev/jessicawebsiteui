@@ -47,7 +47,7 @@ const ExtensionsPage: React.FC<Props> = props => {
 					<li>Beaded Weft</li>
 					<li>Tape Ins</li>
 					<li>Clip Ins</li>
-					<li>Halo</li>
+					<li>I-Tip</li>
 					<li>Keratin</li>
 				</ul>
 				<p className='font-light'>

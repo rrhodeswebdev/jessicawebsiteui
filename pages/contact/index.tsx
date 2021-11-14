@@ -15,8 +15,8 @@ const ContactPage: React.FC = () => {
 					<div className='mb-6'>
 						<SubHeading title='Email' />
 						<p className='font-light text-accent hover:underline'>
-							<a href='mailto:jesse@jesserhodes.style'>
-								jesse@jesserhodes.style
+							<a href='mailto:jesse@graced.studio'>
+								jesse@graced.studio
 							</a>
 						</p>
 					</div>
@@ -33,20 +33,22 @@ const ContactPage: React.FC = () => {
 								href='https://goo.gl/maps/Rqg7wXzG18krgAeZ8'
 								target='_blank'
 							>
-								CC & Company Salon & Spa
+								Graced Studio
 								<br />
-								160 Manor Ave
+								1940 Kannapolis Hwy
 								<br />
-								Concord, NC 28025
+								Suite #3
+								<br />
+								Concord, NC 28027
 							</a>
 						</p>
 					</div>
 					<div className='mb-6'>
 						<SubHeading title='Hours' />
-						<p className='font-light text-accent'>Tuesday 10-1</p>
-						<p className='font-light text-accent'>Wednesday 10-8</p>
-						<p className='font-light text-accent'>Thursday 10-8</p>
-						<p className='font-light text-accent'>Friday 9-4</p>
+						<p className='font-light text-accent'>Tuesday 4-8</p>
+						<p className='font-light text-accent'>Wednesday 9-8</p>
+						<p className='font-light text-accent'>Thursday 9-5</p>
+						<p className='font-light text-accent'>Friday 9-5</p>
 					</div>
 				</div>
 				<div className='flex flex-col flex-1'>
