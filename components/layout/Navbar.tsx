@@ -43,7 +43,7 @@ const Navbar = () => {
 				<div className='flex justify-between items-center'>
 					<Link href='/'>
 						<a className='w-48'>
-							<img src='/jesserhodes-logo.svg' />
+							<img src='/main-logo.png' />
 						</a>
 					</Link>
 					<div className='lg:flex items-center hidden'>

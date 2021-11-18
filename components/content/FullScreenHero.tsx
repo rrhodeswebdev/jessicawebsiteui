@@ -1,19 +1,23 @@
 import React from 'react';
+import Image from 'next/image'
 
 interface Props {
-	image: string;
+    image: StaticImageData;
+    altText: string;
 }
 
-const FullScreenHero: React.FC<Props> = ({ image }) => {
-	return (
-		<div className='w-screen mb-8'>
-			<img
-				className='w-full object-cover'
-				style={{ maxHeight: '750px' }}
-				src={image}
-			/>
-		</div>
-	);
+const FullScreenHero: React.FC<Props> = ({image, altText}) => {
+    return (
+        <div className='mb-8 relative w-full h-96 lg:h-fs'>
+            <Image
+                src={image}
+                alt={altText}
+                height='100%'
+                layout='fill'
+                objectFit='cover'
+            />
+        </div>
+    );
 };
 
 export default FullScreenHero;
