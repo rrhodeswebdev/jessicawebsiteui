@@ -2967,7 +2967,7 @@ sha.js@^2.4.0, sha.js@^2.4.8:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
-sharp@^0.29.3:
+sharp@0.29.3:
   version "0.29.3"
   resolved "https://registry.npmjs.org/sharp/-/sharp-0.29.3.tgz"
   integrity sha512-fKWUuOw77E4nhpyzCCJR1ayrttHoFHBT2U/kR/qEMRhvPEcluG4BKj324+SCO1e84+knXHwhJ1HHJGnUt4ElGA==
