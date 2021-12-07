@@ -8,6 +8,7 @@ frontend:
         build:
             commands:
                 - yarn run build
+                - nvm install
     artifacts:
         baseDirectory: .next
         files:
