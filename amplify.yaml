@@ -3,12 +3,10 @@ frontend:
     phases:
         preBuild:
             commands:
-                - yarn install
-                - nvm install 12
+                - npm install
         build:
             commands:
-                - yarn run build
-                - nvm install
+                - npm run build
     artifacts:
         baseDirectory: .next
         files:
