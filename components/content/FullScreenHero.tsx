@@ -6,13 +6,12 @@ interface Props {
     altText: string;
 }
 
-const FullScreenHero: React.FC<Props> = ({image, altText}) => {
+const FullScreenHero: React.FC<Props> = ({ image, altText }) => {
     return (
         <div className='mb-8 relative w-full h-96 lg:h-fs'>
             <Image
                 src={image}
                 alt={altText}
-                height='100%'
                 layout='fill'
                 objectFit='cover'
             />
