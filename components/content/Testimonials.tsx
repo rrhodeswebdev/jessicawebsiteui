@@ -27,7 +27,7 @@ const Testimonials: React.FC<Props> = ({ testimonials }) => {
 						className='text-center font-light text-2xl italic'
 						key={testimonial._id}
 					>
-						"{testimonial.testimonial}"
+						&quot;{testimonial.testimonial}&quot;
 					</div>
 				))}
 			</Slider>

@@ -73,6 +73,7 @@ const LacedClassBox: React.FC<Props> = ({ classDetails }) => {
 					<a
 						href={classDetails.lacedUrl}
 						target='_blank'
+						rel="noreferrer"
 						className='flex justify-center lg:justify-start'
 					>
 						<button className='text-white bg-primary hover:bg-accent w-3/4 p-2 mb-6 transition-colors text-center uppercase font-light'>

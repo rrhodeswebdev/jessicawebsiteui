@@ -12,7 +12,7 @@ interface Props {
 const ActiveLink: React.FC<Props> = ({ children, href }) => {
 	const router = useRouter();
 
-	const handleClick = (e: any) => {
+	const handleClick = (e: React.SyntheticEvent ) => {
 		e.preventDefault();
 		router.push(href);
 	};
