@@ -23,7 +23,7 @@ const ContactForm = () => {
 	const formId = 'a8dbe954-c457-41f1-8292-fd3b55fef13c';
 
 	const context = {
-		pageUri: 'https://jesserhodes.style/contact',
+		pageUri: 'https://graced.studio/contact',
 		pageName: 'Contact',
 	};
 

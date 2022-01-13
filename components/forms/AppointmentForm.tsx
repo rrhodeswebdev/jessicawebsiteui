@@ -22,7 +22,7 @@ const AppointmentForm: React.FC = () => {
 	} = useForm<FormData>();
 	const formId = '6336fa11-d394-4327-9735-6dfe287c716c';
 	const context = {
-		pageUri: 'https://jesserhodes.style/booking/appointment',
+		pageUri: 'https://graced.studio/booking/appointment',
 		pageName: 'Appointment Request',
 	};
 
