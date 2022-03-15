@@ -20,21 +20,28 @@ const testimonialQuery = groq`
   *[_type == 'testimonials' && forPage == 'Home']
 `;
 
-const HomePage: React.FC<Props> = props => {
+const HomePage: React.FC<Props> = (props) => {
 	const { data: testimonials } = props;
 
 	return (
 		<>
 			<Head>
 				<title>Home - Graced Studio</title>
-				<meta name='description'
-					content="Graced Studio by Jesse Rhodes is Concord's premiere salon for coloring and extension services." />
+				<meta
+					name="description"
+					content="Graced Studio by Jesse Rhodes is Concord's premiere salon for coloring and extension services."
+				/>
 			</Head>
-			<FullScreenHero image={homePageImage} altText='Homepage Header' />
+			<FullScreenHero image={homePageImage} altText="Homepage Header" />
 			<Testimonials testimonials={testimonials.testimonials} />
-			<div className='flex flex-col md:flex-row justify-center items-center p-6 md:mb-8'>
-				<Button href='/booking/appointment'>Appointments</Button>
-				<Button href='/education'>Classes</Button>
+			<div className="flex flex-col md:flex-row justify-center items-center p-6 md:mb-8">
+				<Button
+					href="https://squareup.com/appointments/book/f5ksza0xzqnzy3/LGZK3E9BBVKB5/start"
+					external
+				>
+					Appointments
+				</Button>
+				<Button href="/education">Classes</Button>
 			</div>
 		</>
 	);
